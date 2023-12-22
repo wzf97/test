@@ -85,7 +85,7 @@ int DrawFaceRect(LPASVLOFFSCREEN asvlOffScreen,int top,int left,int right,int bo
 int WriteNV21(const char* pFileName,int width,int height,LPASVLOFFSCREEN asvlOffScreen){
     FILE* fp = fopen(pFileName,"wb");
     if(fp == NULL){
-        cout<<"´ò¿ªÎÄ¼þÊ§°Ü£¡"<<endl;
+        cout<<"ï¿½ï¿½ï¿½Ä¼ï¿½Ê§ï¿½Ü£ï¿½"<<endl;
         return -1;
     }
     int nSize = width * height*3/2;
@@ -99,12 +99,12 @@ int main(){
     int res = 0;
     int width = 0;
     int height = 0;
-    cout<<"ÇëÊäÈëÍ¼ÏñµÄ¿í¶È£º"<<endl;;
+    cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¿ï¿½ï¿½È£ï¿½"<<endl;;
     cin>>width;
-    cout<<"ÇëÊäÈëÍ¼ÏñµÄ¸ß¶È£º"<<endl;
+    cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä¸ß¶È£ï¿½"<<endl;
     cin>>height;
     string pFileName;
-    cout<<"ÇëÊäÈëÊäÈëÍ¼ÏñµÄÂ·¾¶£º"<<endl;
+    cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½"<<endl;
     cin>>pFileName;
     int left=0;
     int top=0;
@@ -112,18 +112,18 @@ int main(){
     int bottom=0;
     int faceWidth = 0;
     int faceHeight = 0;
-    cout<<"ÇëÊäÈëÈËÁ³¿ò·¶Î§£º"<<endl;
+    cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½"<<endl;
     cin>>left>>top>>faceWidth>>faceHeight;
     right = left + faceWidth;
     bottom = top + faceHeight;
-    //¶ÁÈ¡Í¼Ïñ
+    //ï¿½ï¿½È¡Í¼ï¿½ï¿½
     ASVLOFFSCREEN asvlOffScreen;
     res = ReadNV21(pFileName.c_str(),width,height,&asvlOffScreen);
     cout<<"ReadNV21: "<<res<<endl;
-    //ÈËÁ³¼ì²â
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     res = DrawFaceRect(&asvlOffScreen,top,left,right,bottom);
     cout<<"DrawFaceRect: "<<res<<endl;
-    //±£´æÍ¼Ïñ
+    //ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
     string dstFileName = "./DrawFaceRect_";
     dstFileName.append(to_string(width));
     dstFileName.append("x");
