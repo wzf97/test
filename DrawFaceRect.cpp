@@ -99,7 +99,7 @@ int main(){
     int res = 0;
     int width = 0;
     int height = 0;
-    cout<<"������ͼ��Ŀ��ȣ�"<<endl;;
+    cout<<"������ͼ��Ŀ��ȣ�"<<endl;
     cin>>width;
     cout<<"������ͼ��ĸ߶ȣ�"<<endl;
     cin>>height;
