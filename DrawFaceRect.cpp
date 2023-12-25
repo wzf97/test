@@ -98,12 +98,12 @@ int main(){
     int res = 0;
     int width = 0;
     int height = 0;
-    cout<<"??????????????"<<endl;
+    cout<<"input image width"<<endl;
     cin>>width;
-    cout<<"?????????????"<<endl;
+    cout<<"input image height"<<endl;
     cin>>height;
     string pFileName;
-    cout<<"????????????????????"<<endl;
+    cout<<"input image file path"<<endl;
     cin>>pFileName;
     int left=0;
     int top=0;
@@ -111,18 +111,18 @@ int main(){
     int bottom=0;
     int faceWidth = 0;
     int faceHeight = 0;
-    cout<<"????????????????"<<endl;
+    cout<<"input face left top faceWidth and faceHeight"<<endl;
     cin>>left>>top>>faceWidth>>faceHeight;
     right = left + faceWidth;
     bottom = top + faceHeight;
-    //??????
+    //read nv21 image
     ASVLOFFSCREEN asvlOffScreen;
     res = ReadNV21(pFileName.c_str(),width,height,&asvlOffScreen);
     cout<<"ReadNV21: "<<res<<endl;
-    //???????
+    //draw face rect
     res = DrawFaceRect(&asvlOffScreen,top,left,right,bottom);
     cout<<"DrawFaceRect: "<<res<<endl;
-    //???????
+    //save result
     string dstFileName = "./DrawFaceRect_";
     dstFileName.append(to_string(width));
     dstFileName.append("x");
