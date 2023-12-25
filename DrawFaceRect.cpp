@@ -2,10 +2,9 @@
 #include<string>
 #include<iostream>
 #include<algorithm>
-
-
 using namespace std;
 
+//这是第6次提交
 typedef struct __tag_ASVL_OFFSCREEN
 {
 int u32PixelArrayFormat;
