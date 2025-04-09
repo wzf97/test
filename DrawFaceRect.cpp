@@ -4,7 +4,7 @@
 #include<algorithm>
 using namespace std;
 
-//这是第6次提交
+//test
 typedef struct __tag_ASVL_OFFSCREEN
 {
 int u32PixelArrayFormat;
